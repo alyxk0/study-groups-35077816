@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+body {
+  margin: 0;
+  background: white;
+  color: #222;
+  font:
+    14px/1.45 Arial,
+    sans-serif;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: #f2f2f2;
+  color: #222;
+  cursor: pointer;
+}
+button:hover {
+  background: #e5e5e5;
+}
+button:disabled {
+  color: #888;
+  cursor: default;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #356ba0;
+  outline-offset: 2px;
+}
+input,
+select {
+  min-width: 0;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: white;
+  color: #222;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+small,
+.muted,
+.table-note {
+  color: #666;
+  font-size: 12px;
+}
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+h2 {
+  margin: 0 0 16px;
+  font-size: 19px;
+}
+h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+p {
+  margin: 8px 0 14px;
+}
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #bbb;
+}
+.app-header > strong {
+  font-size: 18px;
+}
+.account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-bottom: 1px solid #ccc;
+  background: #f6f6f6;
+}
+.nav-item.active {
+  background: #ddd;
+  border-color: #777;
+  font-weight: bold;
+}
+.live-status {
+  margin-left: auto;
+  font-size: 12px;
+  color: #666;
+}
+.live-status i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  background: #999;
+  border-radius: 50%;
+}
+.live-status i.online {
+  background: #3b753b;
+}
+main {
+  min-width: 0;
+  padding: 20px;
+}
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.toolbar,
+.toolbar form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.toolbar {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.toolbar select {
+  width: 180px;
+}
+.toolbar input {
+  width: 200px;
+}
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid #bbb;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 13px;
+}
+th,
+td {
+  padding: 8px 10px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background: #eee;
+  font-weight: 600;
+}
+th button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: inherit;
+}
+th button:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+tbody tr:hover {
+  background: #f1f1f1;
+}
+.row-actions {
+  display: flex;
+  gap: 5px;
+}
+.row-actions button {
+  font-size: 12px;
+  padding: 3px 7px;
+}
+.delete-action {
+  color: #952b2b;
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 12px 0;
+}
+.pagination > div,
+.pagination label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+.pagination select {
+  width: 60px;
+}
+.table-note {
+  margin-top: 12px;
+}
+.empty {
+  padding: 24px 0;
+}
+.operations-grid {
+  max-width: 680px;
+}
+.operation-card {
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+}
+.operation-card:first-child {
+  padding-top: 0;
+}
+.operation-card p {
+  color: #555;
+}
+.operation-card form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px;
+}
+.operation-card label {
+  width: 210px;
+}
+.operation-card output {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+.operation-card output:empty {
+  display: none;
+}
+.guide-card {
+  max-width: 750px;
+}
+.guide-card li {
+  margin-bottom: 10px;
+}
+.auth-layout {
+  max-width: 370px;
+  margin: 65px auto;
+  padding: 0 18px;
+}
+.auth-panel h1 {
+  margin-bottom: 24px;
+}
+.auth-panel label {
+  margin-top: 16px;
+}
+.auth-panel .full {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+}
+.auth-panel .text-button {
+  margin-top: 8px;
+}
+.text-button {
+  background: transparent;
+  color: #245a8d;
+  border-color: transparent;
+  text-decoration: underline;
+}
+.text-button:hover {
+  background: #f1f1f1;
+}
+dialog {
+  width: min(640px, calc(100% - 24px));
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 2px;
+  color: #222;
+}
+dialog::backdrop {
+  background: #0005;
+}
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.dialog-heading h2 {
+  margin: 0;
+}
+.icon-button {
+  padding: 0 7px;
+  font-size: 20px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.span-two {
+  grid-column: span 2;
+}
+.form-grid .text-button {
+  align-self: start;
+  padding: 2px 0;
+  font-size: 12px;
+}
+.dialog-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+.dialog-footer > span {
+  margin-right: auto;
+}
+.error-box,
+.notice {
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #b77;
+  color: #802020;
+  background: #fff8f8;
+}
+.notice {
+  border-color: #bba15b;
+  background: #fffcf0;
+  color: #705813;
+}
+.field-error {
+  color: #a12121;
+}
+.invalid {
+  border-color: #a12121;
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin: 0;
+}
+.details-grid div {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+.details-grid dt {
+  color: #666;
+  font-size: 12px;
+}
+.details-grid dd {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+}
+.details-section {
+  margin-top: 20px;
+}
+#confirm-dialog {
+  max-width: 450px;
+}
+.toast {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  max-width: calc(100% - 30px);
+  padding: 10px 15px;
+  border: 1px solid #999;
+  background: #fff;
+  z-index: 100;
+}
+.loading {
+  padding: 30px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 14px 10px;
+  }
+  .app-header,
+  nav {
+    padding: 10px;
+  }
+  .account {
+    gap: 6px;
+  }
+  .account #username {
+    max-width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .live-status {
+    width: 100%;
+    margin: 3px 0 0;
+  }
+  .form-grid,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .span-two {
+    grid-column: auto;
+  }
+  .toolbar input,
+  .toolbar select {
+    width: 155px;
+  }
+  .operation-card form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .operation-card label {
+    width: 100%;
+  }
+  .auth-layout {
+    margin-top: 35px;
+  }
+}

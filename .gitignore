@@ -1,0 +1,7 @@
+target/
+.idea/
+*.iml
+.env
+server.properties
+*.log
+*.pid

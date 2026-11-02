@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm" version="3.0">
+    <sequence-generator name="heliosIds" sequence-name="sg35077816_object_seq" allocation-size="1"/>
+    <mapped-superclass class="ru.study.groups.domain.BaseEntity">
+        <attributes>
+            <id name="id"><generated-value strategy="SEQUENCE" generator="heliosIds"/></id>
+        </attributes>
+    </mapped-superclass>
+    <entity class="ru.study.groups.domain.Coordinates"><table name="sg35077816_coordinates"/></entity>
+    <entity class="ru.study.groups.domain.Location"><table name="sg35077816_location"/></entity>
+    <entity class="ru.study.groups.domain.Person"><table name="sg35077816_person"/></entity>
+    <entity class="ru.study.groups.domain.StudyGroup"><table name="sg35077816_study_group"/></entity>
+    <entity class="ru.study.groups.domain.UserAccount"><table name="sg35077816_app_user"/></entity>
+</entity-mappings>
